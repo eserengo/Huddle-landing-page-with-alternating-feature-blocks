@@ -1,0 +1,99 @@
+body {
+  min-width: 550px;
+}
+
+.header {
+  padding: 5%;
+  background-image: url("./images/bg-hero-desktop.svg");
+  background-repeat: no-repeat;
+  background-position: 0% 0%;
+  background-size: 100% 100%;
+}
+
+.header .image {
+  width: 50%;
+}
+
+.header .flex-row {
+  gap: 5%;
+  margin-top: 10%;
+}
+
+.header .primary.title {
+  text-align: left;
+  padding-right: 25%;
+}
+
+.header .strong {
+  text-align: left;
+  margin: 5% 0%;
+}
+
+.main {
+  padding: 10%;
+  gap: 24px;
+}
+
+.section {
+  padding: 5%;
+  gap: 48px;
+}
+
+.section .image {
+  width: 40%;
+}
+
+.section .flex-col {
+  text-align: left;
+}
+
+.section .para {
+  margin-top: 5%;
+}
+
+.section.one .flex-col,
+.section.three .flex-col {
+  order: 1;
+}
+
+.section.one .image,
+.section.three .image {
+  order: 2;
+}
+
+.section.four {
+  padding: 5%;
+  width: 60%;
+  margin: 0% auto;
+}
+
+.footer {
+  margin-top: -15%;
+  padding: 10% 5% 5%;
+  gap: 80px;
+}
+
+.grid-container {
+  width: 25%;
+}
+
+.footer nav {
+  width: 25%;
+}
+
+.links {
+  gap: 16px;
+}
+
+.social {
+  gap: 16px;
+}
+
+.grid-container {
+  height: 160px;
+}
+
+.copy {
+  bottom: 10%;
+  right: 5%;
+}

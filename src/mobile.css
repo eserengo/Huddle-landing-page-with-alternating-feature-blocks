@@ -1,0 +1,70 @@
+body {
+  min-width: 250px;
+}
+
+.header {
+  padding: 5%;
+  background-image: url("./images/bg-hero-mobile.svg");
+  background-repeat: no-repeat;
+  background-position: 0%, 0%;
+  background-size: 100%, 50%;
+}
+
+.header .primary.title {
+  margin-top: 25%;
+}
+
+.header .strong {
+  margin: 10% 0%;
+}
+
+.header .button {
+  margin: 0% auto;
+}
+
+.header .image {
+  margin-top: 15%;
+}
+
+.main {
+  padding: 15% 5%;
+  gap: 32px;
+}
+
+.section {
+  padding: 10%;
+}
+
+.section .sub.title {
+  margin: 15% 0% 5%;
+}
+
+.section.four {
+  padding: 10% 5%;
+}
+
+.footer {
+  margin-top: -33%;
+  padding: 33% 5% 25%;
+  gap: 48px;
+}
+
+.links {
+  gap: 16px;
+}
+
+.social {
+  gap: 16px;
+}
+
+.copy {
+  width: 100%;
+  bottom: 0%;
+  left: 75%;
+  transform: translate(-50%, -50%);
+}
+
+.grid-container {
+  height: 160px;
+  margin-top: 10%;
+}

@@ -1,0 +1,251 @@
+/*
+ Name: Huddle landing page with alternating feature blocks.
+ Description: A Frontendmentor.io coding challenge.
+ Author: Federico Borzani
+ Author URL:  https://github.com/eserengo/
+*/
+
+/* --- TAGS --- */
+
+:root {
+
+  /* --- FONTS --- */
+
+  font-size: 18px;
+  --Poppins-Headings: "Poppins";
+  --Poppins-Normal: 600;
+  --Open-Sans-Body-CallToActions: "Open Sans";
+  --Open-Sans-Normal: 400;
+  --Open-Sans-Bold: 700;
+  text-rendering: optimizeLegibility;
+
+  /* --- COLOR PALETTE --- */
+
+  --Pink: hsl(322, 100%, 66%);
+  --Very-Pale-Cyan: hsl(193, 100%, 96%);
+  --Very-Dark-Cyan: hsl(192, 100%, 9%);
+  --Grayish-Blue: hsl(208, 11%, 55%);
+  --White: hsl(0, 0%, 99%);
+}
+
+* {
+  box-sizing: border-box;
+  max-width: 100%;
+  padding: 0%;
+  margin: 0%;
+  user-select: none;
+}
+
+body {
+  min-height: 100vh;
+  max-width: 100vw;
+}
+
+ul, li {
+  list-style-type: none;
+}
+
+/* --- GENERAL CLASSES --- */
+
+.hidden {
+  display: none;
+}
+
+.selectable:hover {
+  cursor: pointer;
+  user-select: all;
+}
+
+.rel {
+  position: relative;
+}
+
+.abs {
+  position: absolute;
+}
+
+.left {
+  float: left;
+}
+
+.right {
+  float: right;
+}
+
+.center {
+  text-align: center;
+}
+
+.flex-col {
+  display: flex;
+  flex-flow: column nowrap;
+}
+
+.flex-row {
+  display: flex;
+  flex-flow: row nowrap;
+}
+
+.flex-row.center,
+.flex-col.center {
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.abs.center {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+/* --- SPECIFIC CLASSES --- */
+
+.title {
+  font-family: var(--Poppins-Headings);
+  font-weight: var(--Poppins-Normal);
+  color: var(--Very-Dark-Cyan);
+}
+
+.primary.title {
+  font-size: 125%;
+}
+
+.secondary.title {
+  font-size: 110%;
+}
+
+.sub.title {
+  font-size: 100%;
+}
+
+.para {
+  font-family: var(--Open-Sans-Body-CallToActions);
+  font-weight: var(--Open-Sans-Normal);
+  font-size: 75%;
+  color: var(--Grayish-Blue);
+}
+
+.strong {
+  font-family: var(--Open-Sans-Body-CallToActions);
+  font-weight: var(--Open-Sans-Normal);
+  color: var(--Very-Dark-Cyan);
+  font-size: 85%;
+}
+
+.button {
+  font-family: var(--Open-Sans-Body-CallToActions);
+  font-weight: var(--Open-Sans-Bold);
+  opacity: 80%;
+}
+
+.primary.button {
+  width: 240px;
+  height: 40px;
+  padding: 4px 24px;
+  background-color: var(--Pink);
+  border: 1px solid var(--Pink);
+  color: var(--Very-Pale-Cyan);
+  border-radius: 32px;
+  font-size: 75%;
+}
+
+.secondary.button {
+  width: 100px;
+  height: 24px;
+  padding: 0px 8px;
+  background-color: var(--White);
+  border: 1px solid var(--White);
+  color: var(--Very-Dark-Cyan);
+  border-radius: 16px;
+  font-size: 60%;
+  box-shadow: 0px 1px 4px var(--Grayish-Blue);
+}
+
+.button:hover {
+  opacity: 100%;
+}
+
+.header {
+  background-color: var(--Very-Pale-Cyan);
+}
+
+.header .logo {
+  width: 100px;
+  margin-top: 4px;
+}
+
+.section {
+  border: 1px solid var(--White);
+  background-color: var(--White);
+  box-shadow: 0px 1px 4px var(--Grayish-Blue);
+  border-radius: 16px;
+}
+
+.section.four {
+  gap: 24px;
+  z-index: 1;
+  background-color: var(--White);
+}
+
+.footer {
+  background-color: var(--Very-Dark-Cyan);
+  font-family: var(--Open-Sans-Body-CallToActions);
+  font-weight: var(--Open-Sans-Normal);
+  font-size: 75%;
+  color: var(--Very-Pale-Cyan);
+  z-index: 0;
+}
+
+.fa {
+  border: 1px solid var(--Very-Pale-Cyan);
+  border-radius: 50%;
+  padding: 6px 8px;
+}
+
+.fa:hover {
+  color: var(--Pink);
+  border: 1px solid var(--Pink);
+  border-radius: 50%;
+}
+
+.links > li:hover {
+  text-decoration: underline;
+}
+
+.copy {
+  font-size: 66%;
+}
+
+.attribution {
+  margin-top: 16px;
+  font-family: var(--Open-Sans-Body-CallToActions);
+  font-weight: var(--Open-Sans-Normal);
+  font-size: 50%;
+  text-align: center;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 10% 85%;
+  grid-template-rows: repeat(4, 17.5%);
+  column-gap: 5%;
+  row-gap: 10%;
+}
+
+.footer .logo {
+  grid-column: 1 / span 2;
+  width: 160px;
+}
+
+.icon {
+  grid-column: 1;
+}
+
+.text {
+  grid-column: 2;
+}
