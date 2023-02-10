@@ -1,5 +1,10 @@
+import Heading from "./components/Heading.js";
+import Button from "./components/Button.js";
+import Para from "./components/Para.js";
+import Image from "./components/Image.js";
+import Attribution from "./components/Attribution.js";
+
 (function () {
-  document.querySelector('body').insertAdjacentHTML('afterbegin', `<div id='App'></div>`);
   
   const DisplayOnResize = () => {
     if (window.matchMedia("(width<=375px)").matches) {
@@ -35,44 +40,6 @@
     window.clearTimeout(timer);
     timer = window.setTimeout(DisplayOnResize(), 500);
   });
-
-  class Heading extends React.Component {
-    constructor(props) {
-      super();
-    }
-    render() {
-      if (this.props.query == 'h1') return <h1 className={this.props.class}>{this.props.content}</h1>;
-      else if (this.props.query == 'h2') return <h2 className={this.props.class}>{this.props.content}</h2>;
-      else return <h3 className={this.props.class}>{this.props.content}</h3>
-    }
-  }
-
-  class Button extends React.Component {
-    constructor(props) {
-      super();
-    }
-    render() {
-      return <button className={this.props.class}>{this.props.content}</button>;
-    }
-  }
-
-  class Para extends React.Component {
-    constructor(props) {
-      super();
-    }
-    render() {
-      return <p className={this.props.class}>{this.props.content}</p>;
-    }
-  }
-
-  class Image extends React.Component {
-    constructor(props) {
-      super();
-    }
-    render() {
-      return <img className={this.props.class} src={this.props.src} alt={this.props.alt} />;
-    }
-  }
 
   const ContactNav = () => (
     <div className='grid-container'>
@@ -167,25 +134,20 @@
       <Para class='copy abs' content='&copy; Copyright 2018 Huddle. All rights reserved.' />
     </footer>
   )
-  
-  const Attribution = () => (
-    <p className='attribution'>Challenge by <a href='https://www.frontendmentor.io?ref=challenge' target='_blank'>Frontend Mentor</a>. Coded by <a href='https://github.com/eserengo/' target='_blank'>Federico Borzani</a>.</p>
-  )
 
   const App = () => {
     React.useEffect(() => {
       DisplayOnResize()
     }, []);
     return (
-      <div>
+      <>
         <Header />
         <Main />
         <Footer />
         <Attribution />
-      </div>
+      </>
     )
   }
 
-  const root = ReactDOM.createRoot(document.getElementById('App'));
-  root.render(<App tab='home' />);
+  ReactDOM.createRoot(document.getElementById('root')).render(<App tab='home' />);
 })();

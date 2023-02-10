@@ -226,6 +226,7 @@ ul, li {
   font-family: var(--Open-Sans-Body-CallToActions);
   font-weight: var(--Open-Sans-Normal);
   font-size: 50%;
+  display: block;
   text-align: center;
 }
 

@@ -6,9 +6,9 @@
   <link rel="icon" type="image/png" sizes="32x32" href="./src/images/favicon-32x32.png">
   <title>Frontend Mentor | Huddle landing page with alternating feature blocks</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin="anonymous"></script>
-  <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin="anonymous"></script>
-  <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+  <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+  <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+  <script crossorigin src="https://unpkg.com/@babel/standalone@7.19.3/babel.js"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin="anonymous">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open Sans:wght@400;700&display=swap">
@@ -17,9 +17,15 @@
   <link rel="stylesheet" href="./src/index.css" media="all">
   <link rel="stylesheet" href="./src/mobile.css" media="only screen and (width <= 375px)">
   <link rel="stylesheet" href="./src/desktop.css" media="only screen and (width > 375px)">
-  <script type="text/babel" data-type="module" src="./src/index.js" defer crossorigin="anonymous"></script>
+  <script crossorigin data-plugins="transform-modules-umd" data-presets="react" data-type="module" type="text/babel" src="./src/components/Heading.js"></script>
+  <script crossorigin data-plugins="transform-modules-umd" data-presets="react" data-type="module" type="text/babel" src="./src/components/Button.js"></script>
+  <script crossorigin data-plugins="transform-modules-umd" data-presets="react" data-type="module" type="text/babel" src="./src/components/Para.js"></script>
+  <script crossorigin data-plugins="transform-modules-umd" data-presets="react" data-type="module" type="text/babel" src="./src/components/Image.js"></script>
+  <script crossorigin data-plugins="transform-modules-umd" data-presets="react" data-type="module" type="text/babel" src="./src/components/Attribution.js"></script>
 </head>
 
 <body>
+  <div id="root" />
+  <script crossorigin data-plugins="transform-modules-umd" data-presets="react" data-type="module" type="text/babel" src="./src/index.js" defer></script>
 </body>
 </html>
